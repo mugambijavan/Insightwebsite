@@ -1,9 +1,14 @@
+/* navbar.css */
 .gpt3__navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: 2rem 6rem;
+    position: fixed; /* Fix the navbar at the top */
+    top: 0;
+    width: 100%; /* Ensure it spans the full width */
+    background-color: var(--color-bg); /* Adjust according to your design */
+    z-index: 1000; /* Ensure it stays above other elements */
 }
 
 .gpt3__navbar-links {
@@ -42,7 +47,6 @@
     font-size: 18px;
     line-height: 25px;
     text-transform: capitalize;
-
     margin: 0 1rem;
     cursor: pointer;
 }
@@ -64,7 +68,6 @@
 
 .gpt3__navbar-menu {
     margin-left: 1rem;
-
     display: none;
     position: relative;
 }
@@ -78,17 +81,16 @@
     justify-content: flex-end;
     align-items: flex-end;
     flex-direction: column;
-    
     text-align: end;
     background: var(--color-footer);
     padding: 2rem;
     position: absolute;
     right: 0;
-    top: 40px;
+    top: 40px; /* Adjusted for fixed navbar */
     margin-top: 1rem;
     min-width: 210px;
     border-radius: 5px;
-    box-shadow: 0px 0px 5px rgba(0,0, 0,0.2);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
 
 .gpt3__navbar-menu_container p {
